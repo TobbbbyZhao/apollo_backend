@@ -17,7 +17,7 @@ if [ "$LOCAL_COMMIT" != "$REMOTE_COMMIT" ]; then
     npm install
 
     echo "🛑 Stopping existing Node.js server..."
-    pkill -f "sudo node server.js"
+    sudo pkill -f "sudo nohup node server.js"
 
     echo "🚀 Starting Node.js server..."
     sudo nohup node server.js > server.log 2>&1 &
